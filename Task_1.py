@@ -7,15 +7,18 @@
 number = 0
 number_float = 2.14
 string = "Hello!"
+
 error_flag_1 = 0 # Используем для проверки ввода правильного типа данных
 error_flag_2 = 0 # Используем для проверки ввода правильного типа данных
 error_flag_3 = 0 # Используем для проверки ввода правильного типа данных
 
+#print new variables
 print(number, number_float, string)
+
 #б) request some numbers and strings
 
 """
-Ввод строкового значение при запросе числа выдает ошибку.
+Ввод строкового значения при запросе числа выдает ошибку.
 По идее нужно проверять, что ввели. 
 
 без проверки:
@@ -53,6 +56,8 @@ user_string3 = input("Введите и еще пару слов : ")
 
 print("Введенные числа \n", user_number1, user_number2, user_number3)
 print("Введенные строки \n", user_string1, "\n", user_string2, "\n", user_string3)
+
+# Почему "\n" вводит пробел или отступ в начале строки???
 
 
 
