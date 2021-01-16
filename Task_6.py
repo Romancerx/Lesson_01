@@ -26,3 +26,5 @@ while first_result < goal:
     days_counter += 1
 
 print(f"На {days_counter}-й день спортсмен достиг результата — не менее {goal} км")
+
+# Commit

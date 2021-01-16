@@ -11,3 +11,5 @@ seconds = time_in_seconds % 60  # Count seconds
 print(f"Время: {hours}:{minutes}:{seconds}")  # Formatting using "f-strings"
 print('Время: %d'':''%d'':''%d' % (hours, minutes, seconds))  # Formatting using "%"
 print('Время: {0}:{1}:{2}'.format(hours, minutes, seconds))  # Formatting using ".format"
+
+# Commit

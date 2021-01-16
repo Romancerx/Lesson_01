@@ -58,6 +58,7 @@ print("Введенные числа \n", user_number1, user_number2, user_numbe
 print("Введенные строки \n", user_string1, "\n", user_string2, "\n", user_string3)
 
 # Почему "\n" вводит пробел или отступ в начале строки???
+# Commit
 
 
 
