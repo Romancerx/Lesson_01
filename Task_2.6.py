@@ -23,24 +23,46 @@
 # }
 
 counter = 0
+dict_str = ''
 my_str = ''
 goods_dict = {'title': None,
               'price': None,
               'quantity': None,
-              'pieces': None}
+              'units': None}
 
-goods_list = ()
+goods_tuple = ()
+goods_list = []
+
+title_list = []
+price_list = []
+quant_list = []
+units_list = []
+result_dict = {}
 while True:
+    counter += 1
     if_add_new = input("Add more? ")
     if if_add_new == 'No':
         print(f'List of goods: {goods_list}')
-        print(type(goods_list))
+        result_dict = dict(title=title_list,
+                           price=price_list,
+                           quantity=quant_list,
+                           units=units_list)
+        print(result_dict)
         break
-    goods_dict['title'] = input("Title: ")
-    goods_dict['price'] = input("Price: ")
-    # worker_dict['vaccine'] = bool(input("Vaccine?: ")) #не рабочий вариант
-    goods_dict['quantity'] = input("Quantity: ")  # работает проверка со строкой
-    goods_dict['pieces'] = float(input("Pieces: "))
-    my_str = goods_dict
-    goods_list = (counter, my_str)
 
+    my_str = input("Title: ")
+    goods_dict['title'] = my_str
+    title_list.append(my_str)
+    my_str = input("Price: ")
+    goods_dict['price'] = my_str
+    price_list.append(my_str)
+    my_str = input("Quantity: ")
+    goods_dict['quantity'] = my_str
+    quant_list.append(my_str)
+    my_str = (input("Units: "))
+    goods_dict['units'] = my_str
+    units_list.append(my_str)
+
+    dict_str = goods_dict.copy()
+    goods_tuple = (counter, dict_str)
+    goods_list.append(goods_tuple)
