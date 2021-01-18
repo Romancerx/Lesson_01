@@ -3,12 +3,10 @@
 # При нечётном количестве элементов последний сохранить на своём месте.
 # Для заполнения списка элементов нужно использовать функцию input().
 
-list_str = input("Введите новый элемент: ")
-my_list = list(list_str)
-print(len(my_list))
-counter = 0
+my_list = list(input("Введите новый элемент: "))  # Create new list
+counter = 0  # Just simple counter
+print(my_list)  # For comfortable
+while counter < len(my_list) - 1:
+    my_list[counter], my_list[counter + 1] = my_list[counter + 1], my_list[counter]  # Just like in the lesson)
+    counter += 2  # From conditions - 0 <-> 1, 2 <-> 3
 print(my_list)
-while counter < 19:  # len(list_str):
-    my_list[counter], my_list[counter + 1] = my_list[counter + 1], my_list[counter]
-    counter += 2
-    print(my_list)
