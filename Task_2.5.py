@@ -9,4 +9,12 @@
 # Пользователь ввёл число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать сразу в коде, например, my_list = [7, 5, 3, 3, 2].
 
-my_list = [25, 13, 8, 4, 2, 2, 1]
+rating = [25, 13, 8, 4, 2, 2, 1]
+new_rate = int(input("Введите новый рейтинг: "))
+if rating.count(new_rate) > 0:
+    rating.insert(rating.index(new_rate) + rating.count(new_rate), new_rate)
+else:
+    rating.append(new_rate)
+    rating.sort()
+    rating.reverse()
+print(rating)
