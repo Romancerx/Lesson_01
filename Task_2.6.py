@@ -24,7 +24,6 @@
 
 # Creating variables, dicts, tuple, lists
 counter = 0
-my_str = ''
 goods_dict = {'title': None,
               'price': None,
               'quantity': None,
@@ -47,7 +46,7 @@ while True:
                            price=price_list,
                            quantity=quant_list,
                            units=units_list)
-        print(result_dict)  # Printing result
+        print(f"Analyze: {result_dict}")  # Printing result
         break
 # Filling dictionary and lists of dict values
     goods_dict['title'] = input("Title: ")
