@@ -9,6 +9,7 @@
 # Пользователь ввёл число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать сразу в коде, например, my_list = [7, 5, 3, 3, 2].
 
+my_str = ''
 rating = [25, 13, 8, 4, 2, 2, 1]
 new_rate = int(input("Введите новый рейтинг: "))
 if rating.count(new_rate) > 0:
@@ -17,4 +18,7 @@ else:
     rating.append(new_rate)
     rating.sort()
     rating.reverse()
-print(rating)
+
+for el in range(0, len(rating)):
+    my_str += ', ' + str(rating[el])
+print(f"{my_str[2:]}.")
