@@ -21,3 +21,21 @@
 #     “количество”: [5, 2, 7],
 #     “ед”: [“шт.”]
 # }
+
+goods_dict = {'title': None,
+              'price': None,
+              'quantity': None,
+              'pieces': None}
+
+goods_list = ()
+while True:
+    if_add_new = input("Add more? ")
+    if if_add_new == 'No':
+        print(f'List of goods: {goods_list}')
+        break
+    worker_dict['title'] = input("Title: ")
+    worker_dict['price'] = input("Price: ")
+    # worker_dict['vaccine'] = bool(input("Vaccine?: ")) #не рабочий вариант
+    worker_dict['quantity'] = input("Quantity: ")  # работает проверка со строкой
+    worker_dict['pieces'] = float(input("Pieces: "))
+    goods_list.append(goods_dict.copy())
