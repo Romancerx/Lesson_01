@@ -22,8 +22,8 @@
 #     “ед”: [“шт.”]
 # }
 
+# Creating variables, dicts, tuple, lists
 counter = 0
-dict_str = ''
 my_str = ''
 goods_dict = {'title': None,
               'price': None,
@@ -41,28 +41,24 @@ result_dict = {}
 while True:
     counter += 1
     if_add_new = input("Add more? ")
-    if if_add_new == 'No':
-        print(f'List of goods: {goods_list}')
+    if if_add_new == 'No':  # End condition
+        print(f'List of goods: {goods_list}')  # Printing our structure
         result_dict = dict(title=title_list,
                            price=price_list,
                            quantity=quant_list,
                            units=units_list)
-        print(result_dict)
+        print(result_dict)  # Printing result
         break
-
-    my_str = input("Title: ")
-    goods_dict['title'] = my_str
-    title_list.append(my_str)
-    my_str = input("Price: ")
-    goods_dict['price'] = my_str
-    price_list.append(my_str)
-    my_str = input("Quantity: ")
-    goods_dict['quantity'] = my_str
-    quant_list.append(my_str)
-    my_str = (input("Units: "))
-    goods_dict['units'] = my_str
-    units_list.append(my_str)
-
-    dict_str = goods_dict.copy()
-    goods_tuple = (counter, dict_str)
+# Filling dictionary and lists of dict values
+    goods_dict['title'] = input("Title: ")
+    title_list.append(goods_dict.get('title'))
+    goods_dict['price'] = input("Price: ")
+    price_list.append(goods_dict.get('price'))
+    goods_dict['quantity'] = input("Quantity: ")
+    quant_list.append(goods_dict.get('quantity'))
+    goods_dict['units'] = (input("Units: "))
+    units_list.append(goods_dict.get('units'))
+# Creating tuple
+    goods_tuple = (counter, goods_dict.copy())
+# Adding tuple to list
     goods_list.append(goods_tuple)
