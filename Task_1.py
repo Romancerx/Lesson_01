@@ -8,9 +8,9 @@ number = 0
 number_float = 2.14
 string = "Hello!"
 
-error_flag_1 = 0 # Используем для проверки ввода правильного типа данных
-error_flag_2 = 0 # Используем для проверки ввода правильного типа данных
-error_flag_3 = 0 # Используем для проверки ввода правильного типа данных
+error_flag_1 = 0  # Используем для проверки ввода правильного типа данных
+error_flag_2 = 0  # Используем для проверки ввода правильного типа данных
+error_flag_3 = 0  # Используем для проверки ввода правильного типа данных
 
 #print new variables
 print(number, number_float, string)
@@ -58,6 +58,7 @@ print("Введенные числа \n", user_number1, user_number2, user_numbe
 print("Введенные строки \n", user_string1, "\n", user_string2, "\n", user_string3)
 
 # Почему "\n" вводит пробел или отступ в начале строки???
+# Commit
 
 
 
