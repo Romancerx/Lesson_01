@@ -61,3 +61,4 @@ while True:
     goods_tuple = (counter, goods_dict.copy())
 # Adding tuple to list
     goods_list.append(goods_tuple)
+# Last commit
