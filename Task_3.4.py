@@ -22,7 +22,15 @@ def my_func2(x, y):
         z *= x
     return 1 / z
 
+# func without using '**'
+def my_func3(x, y):
+    z = x
+    for i in range(1, y, -1):
+        z /= x
+    return z
+
 # print results
 print(my_func(x_arg, y_arg))
 print(my_func2(x_arg, y_arg))
+print(my_func3(x_arg, y_arg))
 
