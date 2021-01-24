@@ -12,21 +12,20 @@ result = 0
 def find_spaces_func(my_string):
     num = ""
     global end_flag, result
-    for el in my_string:
-        if el != " " and el != "Q":
-            num += el
-        elif el == "Q":
-            end_flag = 0
-            print("break")
-            break
+
+    for i in range(0, len(my_string)):
+        if my_string[i] != " " and my_string[i] != "Q":
+             num += my_string[i]
+        elif my_string[i] == "Q":
+             end_flag = 0
+             break
         else:
-            #print(my_string[len(my_string) - 1])
-            result += int(num)
-            num = ""
-        if el == my_string[len(my_string) - 1]:
-            result += int(num)
-            num = ""
-    print(result)
+             result += int(num)
+             num = ""
+        if i == len(my_string) - 1:
+             result += int(num)
+             num = ""
+    print(f"Сумма всех чисел равна: {result}")
 
 while end_flag != 0:
-    find_spaces_func(input("Введите числа через пробел: "))
+    find_spaces_func(input("Введите числа через пробел, символ Q для выхода: "))
