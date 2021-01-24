@@ -8,11 +8,11 @@
 # Необходимо использовать написанную ранее функцию int_func().
 
 # def int_func(my_str=input("Введите слово или фразу маленькими буквами: ")):
-#     #global my_str
 #     print(my_str.title())
 
 def int_func(my_str):
     return my_str.title()
+
 print(int_func("text"))
 print(int_func("text text text"))
 
