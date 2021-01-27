@@ -9,31 +9,35 @@
 # Вторым пунктом необходимо предусмотреть условие,
 # при котором повторение элементов списка прекратится.
 
+# Using modules and functions
 from itertools import count, cycle
 from argparse import ArgumentParser
 
+# creating parameters for script
 parser = ArgumentParser()
 
-parser.add_argument('--start', type=int)  #
-parser.add_argument('--stop_count', type=int)  #
-parser.add_argument('--stop_cycle', type=int, default=10)  #
+parser.add_argument('--start', type=int)  # "count" function start position
+parser.add_argument('--stop_count', type=int)  # "count" function stop position
+parser.add_argument('--stop_cycle', type=int, default=10)  # "cycle" function stop iteration parameter
 args = parser.parse_args()
 
-my_list = []
+my_list = []  # creating list for friendly print:)
 
+# cycle for count section
 for el in count(args.start):
     if el > args.stop_count:
         break
     else:
-        my_list.append(str(el))
+        my_list.append(str(el))  # append elements to list
 print(my_list)
 
-my_list = []
-с = 0
+my_list = []  # clear list
+с = 0  # use counter
+# cycle for cycle section
 for el in cycle("ABC"):
     if с > args.stop_cycle:
         break
-    my_list.append(el)
+    my_list.append(el)  # append elements to list
     с += 1
 print(my_list)
 
