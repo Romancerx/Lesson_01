@@ -13,6 +13,6 @@ from math import factorial
 def fact(n):
     for i in range(1, n+1):  # Count factorials for all in 1! to n!
         yield factorial(i)  # factorials generator
-n = int(input("Число: "))
+n = int(input("Введите число, для вычисления факторила: "))
 for el in fact(n):
     print(el)
