@@ -13,13 +13,22 @@
 # Пример словаря:
 # {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 
-my_int = "123(lskdj)"
+# Vars
 my_list = []
-my_dict = dict()
+my_dict = {}
+result_dict = {}
 my_str = ""
+value = 0
+# Open file for reading
 with open("5.6.txt", "r", encoding="UTF-8") as f:
     for line in f:
-        my_list = f.read()
-        #my_list
+        my_list = line.split(" ")  # Creating list with elements
+        for i in range(1, len(my_list)):
+            if my_list[i] != chr(8212) and my_list[i] != chr(8212)+"\n":  # Find only numbers. Text have strange symbols "-". Skip it.
+                value += int(my_list[i].split("(")[0])  # Calculating hours.
+        my_str = my_list[0]  # Create string var for use it instead of key.
+        my_dict = {my_str[:len(my_str) - 1]: value}  # Create new dict with one lesson name
+        result_dict.update(my_dict)  # Generating result dict with all lessons
+        value = 0  # Clear hours before next lesson reading
 
-print(my_list)
+print(result_dict)
