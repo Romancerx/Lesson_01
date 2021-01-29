@@ -13,27 +13,28 @@
 #
 # Подсказка: использовать менеджеры контекста.
 import json
-
+# creating vars
 firm_profit = 0
 average_profit = 0
 i = 0
-my_dict = {}
+firm_dict = {}
 average_dict = {}
 all_firms_dict = {}
 profit_list = []
+# Reading data from file
 with open("5.7.txt", "r", encoding="UTF-8") as f:
     for line in f:
         my_list = line.split(" ")  # Creating list with elements
-        if int(my_list[2]) - int(my_list[3]) > 0:
-            firm_profit = int(my_list[2]) - int(my_list[3])
-            average_profit += firm_profit
+        if int(my_list[2]) - int(my_list[3]) > 0:  # filter firms without profit
+            firm_profit = int(my_list[2]) - int(my_list[3])  # count profit
+            average_profit += firm_profit  # increase average profit
             i += 1
-            my_dict = {my_list[0]: firm_profit}
-            all_firms_dict.update(my_dict)
-average_profit /= i
-average_dict = {"average profit": average_profit}
-profit_list.append(all_firms_dict)
+            firm_dict = {my_list[0]: firm_profit}  # create dict with one firm data
+            all_firms_dict.update(firm_dict)  # Add it to global dict
+average_profit /= i  # calculating average profit using counter
+average_dict = {"average profit": average_profit}  # create average profit dict
+profit_list.append(all_firms_dict)  # Create list
 profit_list.append(average_dict)
-
+# Write information in json
 with open("5.7_file.json", "w") as write_f:
     json.dump(profit_list, write_f)
