@@ -8,3 +8,23 @@
 
 # Задачу можно усложнить, реализовав проверку порядка режимов,
 # и при его нарушении выводить соответствующее сообщение и завершать скрипт.
+
+import time, sys  # import
+
+class TrafficLight:
+    __color = ["красный", "желтый", "зеленый"]  # create attribute
+
+    def running(self):  # Method with correct order
+        print(self.__color[0])
+        time.sleep(7)
+        print(self.__color[1])
+        time.sleep(2)
+        print(self.__color[2])
+        time.sleep(7)
+
+my_tl = TrafficLight()  # new copy of class
+while True:
+    try:
+        my_tl.running()  # start running method
+    except KeyboardInterrupt:  # decide to use built-in keyboard interrupt class
+        sys.exit()  # exit when "ctrl+c" is pressed (working only in terminal)
